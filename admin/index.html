@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Administration — Aichata Boujima</title>
+    <link rel="icon" type="image/png" href="../images/Aichata_Logo-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Écran de chargement -->
+    <div id="viewLoading" class="auth-page"><p class="muted">Chargement…</p></div>
+
+    <!-- Connexion -->
+    <div id="viewLogin" class="auth-page" hidden>
+        <main class="auth-card">
+            <div class="auth-brand"><span class="brand-mark">A</span><div><strong>Administration</strong><small>Aichata Boujima</small></div></div>
+            <div id="loginError" class="alert error" hidden></div>
+            <form id="loginForm">
+                <label>E-mail <input type="email" name="email" autocomplete="username" required></label>
+                <label>Mot de passe <input type="password" name="password" autocomplete="current-password" required></label>
+                <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+            </form>
+            <a href="../index.html" class="back-link">← Retour au site</a>
+        </main>
+    </div>
+
+    <!-- Application -->
+    <div id="viewApp" hidden>
+        <header class="topbar">
+            <div class="topbar-inner">
+                <div class="auth-brand"><span class="brand-mark">A</span><div><strong>Administration</strong><small id="adminEmail"></small></div></div>
+                <div class="topbar-actions">
+                    <a href="../index.html" target="_blank" rel="noopener" class="btn btn-ghost">Voir le site ↗</a>
+                    <button id="logoutBtn" class="btn btn-ghost">Déconnexion</button>
+                </div>
+            </div>
+            <nav class="tabs" role="tablist">
+                <button class="tab active" data-tab="projects" role="tab">Projets <span class="count" data-count="projects"></span></button>
+                <button class="tab" data-tab="events" role="tab">Événements <span class="count" data-count="events"></span></button>
+                <button class="tab" data-tab="gallery" role="tab">Galerie photos <span class="count" data-count="gallery"></span></button>
+            </nav>
+        </header>
+
+        <main class="admin-main">
+            <div class="panel-head">
+                <div>
+                    <h1 id="panelTitle">Projets</h1>
+                    <p id="panelHint" class="muted"></p>
+                </div>
+                <button id="addBtn" class="btn btn-primary">+ Ajouter</button>
+            </div>
+            <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+            <div id="list" class="item-list"></div>
+        </main>
+    </div>
+
+    <!-- Formulaire (création / modification) -->
+    <dialog id="editor" class="editor">
+        <form id="editorForm" method="dialog" novalidate>
+            <div class="editor-head">
+                <h2 id="editorTitle">Ajouter</h2>
+                <button type="button" class="icon-btn" data-close aria-label="Fermer">✕</button>
+            </div>
+            <div id="editorError" class="alert error" hidden></div>
+            <div id="editorFields" class="editor-body"></div>
+            <div class="editor-foot">
+                <button type="button" class="btn btn-ghost" data-close>Annuler</button>
+                <button type="submit" class="btn btn-primary" id="saveBtn">Enregistrer</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="admin.js"></script>
+</body>
+</html>

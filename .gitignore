@@ -1,0 +1,40 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*~
+
+# Node modules (si vous utilisez npm)
+node_modules/
+
+# Fichiers de build (si nécessaire)
+dist/
+build/
+
+# Environnement
+.env
+.env.local
+.env.production
+
+# Sauvegardes
+*.bak
+*.backup
+
+# Backend : mots de passe et images envoyées
+api/config.php
+uploads/*
+!uploads/.htaccess

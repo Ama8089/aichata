@@ -1,0 +1,35 @@
+📄 LIENS RAPIDES - TOUTES LES PAGES DU SITE
+=============================================
+
+Ouvrez ces fichiers dans votre navigateur pour tester :
+
+🏠 ACCUEIL
+   index.html
+
+👤 À PROPOS  
+   a-propos.html
+
+💼 EXPERTISE
+   expertise.html
+
+🚀 PROJETS
+   projets.html
+
+🎤 CONFÉRENCES
+   conferences.html
+
+📝 BLOG
+   blog.html
+
+✉️ CONTACT
+   contact.html
+
+=============================================
+
+💡 ASTUCE : 
+Double-cliquez sur index.html pour commencer,
+puis utilisez le menu de navigation pour visiter les autres pages.
+
+📸 N'OUBLIEZ PAS :
+Ajoutez 5 icônes PNG dans le dossier images/icons/
+(Voir images/icons/README.md pour les instructions)

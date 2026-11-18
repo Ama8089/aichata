@@ -1,0 +1,5 @@
+Options -Indexes
+# Seuls les points d'entrée publics sont accessibles
+<FilesMatch "^(config|config\.sample|bootstrap|resources)\.php$">
+    Require all denied
+</FilesMatch>
